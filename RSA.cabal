@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 699fd6b333ec6e6cb851e37f75d0fa5dde0362c5a1cd5471c8caf950ee1ddab2
+
+name:           RSA
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/RSA#readme>
+homepage:       https://github.com/githubuser/RSA#readme
+bug-reports:    https://github.com/githubuser/RSA/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/RSA
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_RSA
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable RSA-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_RSA
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      RSA
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite RSA-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_RSA
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      RSA
+    , base >=4.7 && <5
+  default-language: Haskell2010
